@@ -25,7 +25,7 @@
 </head> 
 <body class="font-poppins bg-[#F4F7FF] transition" id="body">
     <header class="py-2 w-11/12 mx-auto">
-        <div class="flex justify-between py-2 bg-white rounded-lg px-3">
+        <div class="flex flex-col md:flex-row justify-between py-2 bg-white rounded-lg px-3">
             <div>
                 <a class="btn btn-ghost text-2xl" href=""index.html><img src="assets/logo.png" alt=""> Dev<span class="font-bold">Board</span></a>
             </div>
@@ -42,9 +42,9 @@
     </header>
     <main>
         <section class="w-11/12 mx-auto">
-            <div class="flex gap-4">
-                <div class="w-9/12">
-                    <div class="flex justify-between p-2 bg-white rounded-lg">
+            <div class="lg:flex lg:flex-row md:flex-col gap-4">
+                <div class="lg:w-9/12 md:w-auto">
+                    <div class="flex flex-col md:flex-row justify-between p-2 bg-white rounded-lg">
                         <div class="bg-[#F4F7FF] rounded-lg">
                             <div class="flex items-center p-5 space-x-3">
                                 <div class="p-3 bg-white rounded-full">
@@ -70,7 +70,7 @@
                             </div>
                         </div>
                     </div>
-                        <div class="grid grid-cols-3 p-2 gap-3 bg-white rounded-lg my-5">
+                        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 p-2 gap-3 bg-white rounded-lg my-5">
                             <div class="bg-[#F4F7FF] rounded-lg p-5 space-y-3">
                                 <span class="bg-white inline-block p-4 rounded-lg">ShopEase</span>
                                 <h3 class="font-medium text-2xl task-title">Fix Mobile Button Issue </h3>
@@ -175,7 +175,7 @@
                             </div>
                         </div> 
                 </div>
-                <div class="w-3/12 bg-white rounded-lg text-center space-y-5 pt-10 px-5" id="task-log">
+                <div class="lg:w-3/12 md:w-auto bg-white rounded-lg text-center space-y-5 pt-10 px-5" id="task-log">
                     <div class="flex justify-center gap-2">
                         <img src="assets/activity.png" alt="">
                         <h2 class="font-medium text-xl">Activity Log</h2>
