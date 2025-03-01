@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A5 Dev Board</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                poppins: ["Poppins", "serif"],
+              },
+            }
+          }
+        }
+    </script>
+</head>
+<body class="font-poppins bg-[#F4F7FF]">
+    <header class="py-2 w-11/12 mx-auto">
+        <div class="flex justify-between py-2 bg-white rounded-lg px-3">
+            <div>
+                <a class="btn btn-ghost text-2xl" href=""index.html><img src="assets/logo.png" alt=""> Dev<span class="font-bold">Board</span></a>
+            </div>
+            <div class="flex items-center gap-x-10">
+                <a href="index.html" class="btn btn-primary">Back to Desk</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="py-4">
+            <div class="w-11/12 mx-auto">
+                <h2 class="font-bold text-3xl text-center mb-4">Blogs</h2>
+                <div class="rounded-lg space-y-1 mb-3">
+                    <div class="bg-white font-semibold text-xl p-4">
+                        <p>Question-1: What are the different ways to select an element in the DOM?</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-4">
+                        <p>getElementById(): Selects a single element by its unique ID.
+                            <br>
+                            getElementsByClassName(): Selects all elements with a specific class name.
+                            <br>
+                            getElementsByTagName(): Selects all elements with a specific HTML tag name.
+                            <br>
+                            querySelector(): Selects the first element that matches a specified CSS selector.
+                            <br>
+                            querySelectorAll(): Selects all elements that match a specified CSS selector.
+                            
+                    </div>
+                </div>
+                <div class="rounded-lg space-y-1 mb-3">
+                    <div class="bg-white font-semibold text-xl p-4">
+                        <p>Question-2: What is the difference between innerHTML, innerText, and textContent ?</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-4">
+                            <p> innerHTML: </p>
+                            <br>
+                            <p>Gets or sets the HTML markup within an element.</p>
+                            <br>
+                            <p>Includes HTML tags, allowing for rich formatting.</p>
+                            <br>
+                            <p>Can pose security risks (XSS) if used with unsanitized user input.</p>
+                            <br>
+                            <p>It can affect performance, because it can cause the browser to re-render the element.</p>
+                            <p>innerText:</p>
+                            <br>
+                            <p> Gets or sets the visible text content of an element.</p>
+                            <br>
+                            <p>Considers CSS styling, so hidden elements are ignored.</p>
+                            <br>
+                            <p>Tries to represent the text as it would appear rendered in the browser.</p>
+                            <br>
+                            <p>It can be slower than textContent, because it requires layout information.
+                            <br>
+                            <p>textContent</p>
+                            <br>
+                            <p>Gets or sets the text content of an element, including hidden elements.</p>
+                            <br>
+                            <p>Ignores CSS styling. </p>
+                            <br>
+                            <p>Retrieves all text within an element, regardless of visibility. </p>
+                            <br>
+                            <p>It is generally faster then innerText.</p>
+                            <br>
+                            <p> In essence: </p>
+                            <br>
+                            <p> Use innerHTML when you need to work with HTML markup. </p>
+                            <br>
+                            <p> Use innerText when you need to work with the visible text. </p>
+                            <br>
+                            <p> Use textContent when you need to work with all text content. </p>
+                    </div>
+                </div>
+                <div class="rounded-lg space-y-1 mb-3">
+                    <div class="bg-white font-semibold text-xl p-4">
+                        <p>Question-3: What is event delegation in the DOM?</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-4">
+                        <p>Event delegation in the DOM is a technique where you attach a single event listener to a parent element, rather than adding individual event listeners to each of its child elements. This approach leverages the concept of event bubbling.<p>
+                        <br>
+                        <p>Event Bubbling:</p>
+                        <p>When an event occurs on an element, it "bubbles up" through the DOM tree, triggering event listeners on its parent elements. 
+                        <p>
+                        <br>  
+                        <p>How Delegation Works:</p>
+                        <p>Instead of assigning a listener to every child, you assign one listener to the parent.   
+                        When an event happens on a child, it bubbles up to the parent.   
+                        The parent's listener then checks the event.target property to determine which child element originated the event.<p>
+                        <br>
+                        <p>Benefits:</p>
+                        <p>Performance: Reduces the number of event listeners, improving performance, especially with many child elements.<p>
+                        <br>
+                        <p>Dynamic Elements: Handles events on dynamically added child elements without needing to add new listeners.</p>   
+                        <br>
+                        <p>Simplified Code: Makes event handling code cleaner and more maintainable.<p>
+                        </p>
+                    </div>
+                </div>
+                <div class="rounded-lg space-y-1 mb-3">
+                    <div class="bg-white font-semibold text-xl p-4">
+                        <p>Question-4: What is event bubbling in the DOM?</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-4">
+                        <p>Event bubbling is a fundamental concept in the Document Object Model (DOM) that describes how events propagate through the hierarchy of elements.<p>
+                        <br>
+                        <p>The Process:<p>
+                        <br>
+                        <p>When an event occurs on a specific element (the "target" element), that event doesn't necessarily stop there.   
+                        Instead, it "bubbles up" through the DOM tree, meaning it travels upward to the target element's parent, then to its grandparent, and so on, until it reaches the root of the DOM (typically the window object).</p>
+                        <br>
+                        <p>If any of those ancestor elements have event listeners attached to them for that particular event, those listeners will be triggered.</p>
+                        <br>
+                        <p>In simpler terms:</p>
+                        <br>
+                        <p>Imagine dropping a pebble in a pond. The ripples spread outward. Similarly, an event "ripples" upward through the DOM structure.</p>
+
+                    </div>
+                </div>
+                <div class="rounded-lg space-y-1 mb-3">
+                    <div class="bg-white font-semibold text-xl p-4">
+                        <p>Question-5: How do you create, add, and remove elements using JavaScript?</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-4">
+                        <p>Creating Elements:</p>
+                        <br>
+                        <p>document.createElement(tagName): This method creates a new HTML element with the specified tagName (e.g., "div", "p", "span").</p>
+                        <p>Adding Elements:</p>
+                        <br>
+                        <p>parentNode.appendChild(childNode):
+                        Appends a childNode as the last child of a parentNode.
+                        parentNode.insertBefore(newNode, referenceNode):
+                        Inserts a newNode before a referenceNode within a parentNode.
+                        parentNode.append(childNode1, childNode2, ...):
+                        Appends one or more Node or string objects to the last child of the parent.
+                        parentNode.prepend(childNode1, childNode2, ...):
+                        Prepends one or more Node or string objects to the first child of the parent.</p>
+                        <br>
+                        <p>Removing Elements:</p>
+                        <br>
+                        <p> parentNode.removeChild(childNode):
+                        Removes a childNode from its parentNode.
+                        childNode.remove():
+                        Removes the childNode from the DOM. This is a more modern and generally preferred method.
+                        Key Considerations:
+
+                        When removing an element with removeChild(), you need a reference to the parent node. With remove(), you can call the method directly on the element you want to remove.
+                        These methods allow for dynamic updates to web pages, enabling interactive and responsive user experiences.
+                        It is also possible to add and remove content by manipulating the 'innerHTML' property of an element. This method however, is generally less performant, and can create security issues if not properly sanitized.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
